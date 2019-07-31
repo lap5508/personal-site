@@ -1,0 +1,115 @@
+#home-header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 22px 0;
+  z-index: 999;
+}
+#home-header > .container {
+  height: auto;
+}
+.hometop-btn:hover ::ng-deep .mat-button-focus-overlay {
+  display: none;
+}
+#home-header:not(.header-fixed) .hometop-btn ::ng-deep .mat-button-ripple {
+  top: -22px;
+  bottom: -22px;
+}
+.socials ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.socials ul li {
+  display: inline-block;
+}
+.social-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin: 8px;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+  float: right;
+}
+.social-icon.github {
+  background: url('../../../../assets/images/github-logo.png') no-repeat center center;
+}
+.social-icon.linkedin {
+  background: url('../../../../assets/images/social-linkedin.png') no-repeat center center;
+}
+button {
+  color: #ffffff !important;
+}
+
+.header-fixed {
+  position: fixed !important;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 0 !important;
+  animation: .6s slideDown forwards;
+}
+.header-fixed .container {
+  height: 60px !important;
+}
+.header-fixed .hometop-btn {
+  line-height: 60px !important;
+}
+.home-logo {
+  display: flex;
+  align-items: center;
+  a {
+    display: inherit;
+  }
+}
+#menu-toggle {
+  display: none;
+  position: absolute;
+  right: 5px;
+  top: 10px;
+}
+.icon-button {
+  .mat-icon {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  #home-header {
+    padding: 0;
+  }
+  #home-header > .container {
+      height: 60px;
+      padding: 0;
+  }
+  .menu-opened:host .header-mobile-top {
+    padding: 13px 0;
+  }
+  #menu-toggle {
+      display: block;
+  }
+  .menu-opened:host .container {
+      height: auto !important;
+  }
+  .home-logo {
+      margin-left: 15px; 
+  }
+  .top-menu {
+      display: none !important;
+  }
+  .menu-opened:host .top-menu {
+      display: block !important;
+      width: 100% !important;
+      flex: none !important;
+  }
+  .menu-opened:host .top-menu button {
+      display: block;
+      width: 100%;
+      line-height: 56px !important;
+  }
+}

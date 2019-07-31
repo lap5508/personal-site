@@ -1,0 +1,22 @@
+<section id="testimonials-section" class="testimonials-section home-section" [ngClass]="{'light-gray': backgroundGray}">
+  <div class="container">
+    <div class="section-header">
+      <h2>Work Experience</h2>
+      <p>These are the most relevant places I have spent time working at.
+      </p>
+    </div>
+    <div>
+      <div *ngFor="let job of jobs">
+        <mat-card class="p-0">
+          <mat-card-content class="">
+                <h2><strong>{{job.company}} - {{job.location}}</strong></h2>
+                <h3>{{job.title}}, {{job.date}}</h3>
+                <div *ngFor="let task of job.tasks">
+                  <li class="text">{{task}}</li>
+                </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</section>
